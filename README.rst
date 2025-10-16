@@ -275,7 +275,7 @@ The output of that command follows::
                          [-pv PROG] [-mo] [-q] [-ro] [-nco] [-pf] [-sc STR]
                          [-su STR] [-ss STR] [-pw PASSWD] [-pc] [-khc] [-kvc]
                          [-spr FLOAT:FLOAT] [-prw FLOAT FLOAT FLOAT FLOAT] [-ct]
-                         [-ch] [-cv] [-cst] [-i] [-pdl] [-gsp PATH] [-ppp PATH]
+                         [-ch] [-cv] [-cst] [-i] [-gsp PATH] [-ppp PATH]
                          [--version] [-wcdf FILEPATH]
                          PDF_FILE [PDF_FILE ...]
 
@@ -725,7 +725,7 @@ The output of that command follows::
      -gs, --gsBbox
                   This option is maintained for backward compatibility; using '-c
                   gb' is now preferred. Use Ghostscript to directly find the
-                  bounding boxes for the pages, with no explict rendering of the
+                  bounding boxes for the pages, with no explicit rendering of the
                   pages. (The default is to explicitly render the PDF pages to
                   image files and calculate bounding boxes from the images.) This
                   method tends to be much faster, but it does not work with
@@ -740,10 +740,9 @@ The output of that command follows::
      -gsr, --gsRender
                   This is maintained for backward compatibility; using '-c gr' is
                   now preferred. Use Ghostscript to render the PDF pages to
-                  images. By default the pdftoppm program will be preferred for
-                  the rendering, if it is found. Note that this option has no
-                  effect if '--gsBbox' is chosen, since then no explicit
-                  rendering is done.
+                  images. (By default the PyMuPDF program will be preferred for
+                  the rendering.) Note that this option has no effect if '--
+                  gsBbox' is chosen, since then no explicit rendering is done.
 
      -t BYTEVAL, --threshold BYTEVAL
                   Set the threshold for determining what is background space
@@ -1065,16 +1064,6 @@ The output of that command follows::
                   manipulation package (xv on Unix, and usually Paint on
                   Windows).
 
-     -pdl, --pdftoppmLocal
-                  This option is deprecated. Use a locally-packaged pdftoppm
-                  executable rather than the system version. This option is only
-                  available on Windows machines; it is ignored otherwise. By
-                  default the first pdftoppm executable found in the directories
-                  in the PATH environment variable is used. On Windows the
-                  program will revert to this option if PDF image-rendering is
-                  required, PyMuPDF is not installed, and no system pdftoppm or
-                  Ghostscript executable can be found.
-
      -gsp PATH, --ghostscriptPath PATH
                   Pass in a pathname to the ghostscript executable that the
                   program should use. No globbing is done. Useful when the
@@ -1096,4 +1085,5 @@ The output of that command follows::
 
    The pdfCropMargins program is Copyright (c) 2014 by Allen Barker.
    Released under the GNU GPL license, version 3 or later.
+
 
