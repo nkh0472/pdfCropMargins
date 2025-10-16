@@ -538,7 +538,7 @@ cmd_parser.add_argument("-gs", "--gsBbox", action="store_true", help="""
 
    This option is maintained for backward compatibility; using '-c gb' is now
    preferred.  Use Ghostscript to directly find the bounding boxes for the
-   pages, with no explict rendering of the pages.  (The default is to
+   pages, with no explicit rendering of the pages.  (The default is to
    explicitly render the PDF pages to image files and calculate bounding boxes
    from the images.) This method tends to be much faster, but it does not work
    with scanned PDF documents.  It also does not allow for choosing the
